@@ -8,16 +8,16 @@ This repository is maintained by [**LetsDefend**](https://letsdefend.io/). If yo
 
 ## Table of Contents
 
-- What should you expect?
+- [What should you expect?](https://github.com/LetsDefend/SOC-Interview-Questions/blob/main/README.md#what-should-you-expect)
 	- Security Analyst
 	- Incident Response
-- Pre-preparing
-- General
-- Network
-- Web Application Security
-- Cryptography
-- Malware Analysis
-- Event Log Analysis
+- [Pre-preparing](https://github.com/LetsDefend/SOC-Interview-Questions/blob/main/README.md#pre-preparing)
+- [General](https://github.com/LetsDefend/SOC-Interview-Questions/blob/main/README.md#general)
+- [Network](https://github.com/LetsDefend/SOC-Interview-Questions/blob/main/README.md#network)
+- [Web Application Security](https://github.com/LetsDefend/SOC-Interview-Questions/blob/main/README.md#web-application-security)
+- [Cryptography](https://github.com/LetsDefend/SOC-Interview-Questions/blob/main/README.md#cryptography)
+- [Malware Analysis](https://github.com/LetsDefend/SOC-Interview-Questions/blob/main/README.md#malware-analysis)
+- [Event Log Analysis](https://github.com/LetsDefend/SOC-Interview-Questions/blob/main/README.md#event-log-analysis)
 
 
 ## What should you expect?
