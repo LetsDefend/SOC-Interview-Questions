@@ -18,6 +18,7 @@ This repository is maintained by [**LetsDefend**](https://letsdefend.io/). If yo
 - [Cryptography](https://github.com/LetsDefend/SOC-Interview-Questions/blob/main/README.md#cryptography)
 - [Malware Analysis](https://github.com/LetsDefend/SOC-Interview-Questions/blob/main/README.md#malware-analysis)
 - [Event Log Analysis](https://github.com/LetsDefend/SOC-Interview-Questions/blob/main/README.md#event-log-analysis)
+- [Threat Intelligence](https://github.com/LetsDefend/SOC-Interview-Questions/blob/main/README.md#threat-intelligence)
 
 
 ## What should you expect?
@@ -158,29 +159,12 @@ Security information and event management (SIEM), is a security solution that pr
 In general, SIEM products have a number of features. The ones that interest us most as SOC analysts are: they filter the data that they collect and create alerts for any suspicious events. ([LetsDefend](https://app.letsdefend.io/training/lesson_detail/siem-and-analyst-relationship))
 
 ### What Is Indicator Of Compromise (IOCs)?
+
 Indicators of compromise (IOCs) serve as forensic evidence of potential intrusions on a host system or network. These artifacts enable information security (InfoSec) professionals and system administrators to detect intrusion attempts or other malicious activities. Security researchers use IOCs to better analyze a particular malware’s techniques and behaviors. IOCs also provides actionable threat intelligence that can be shared within the community to further improve an organization’s incident response and remediation strategies. ([TrendMico](https://www.trendmicro.com/vinfo/us/security/definition/indicators-of-compromise))
 
-### What Is Indicators of Attack (IOAs)?
+### What is Indicators of Attack (IOAs)?
+
 Indicators of Attack (IOAs) demonstrate the intentions behind a cyberattack and the techniques used by the threat actor to accomplish their objectives. The specific cyber threats arming the attack, like malware, ransomware, or advanced threats, are of little concern when analyzing IOAs. ([UpGuard](https://www.upguard.com/blog/what-are-indicators-of-attack)) 
-
-### What is Cyber Threat Intelligence (CTI)?
-Threat intelligence is the analysis of data using tools and techniques to generate meaningful information about existing or emerging threats targeting the organization that helps mitigate risks. Threat Intelligence helps organizations make faster, more informed security decisions and change their behavior from reactive to proactive to combat the attacks. ([eccouncil](https://www.eccouncil.org/cyber-threat-intelligence/))
-
-### What Is TAXII in Cyber Threat Intelligence (CTI)?
-TAXII, short for Trusted Automated eXchange of Intelligence Information, defines how cyber threat information can be shared via services and message exchanges. ([anomali](https://www.anomali.com/resources/what-are-stix-taxii))
-
-### Name of many Threat Intelligence Platform
-IBM X Force Exchange, Cisco Talos, OTX AlienVault
-
-### What is Cyber threat intelligence Source?
-Source Of Threat Intelligence Is a source to can deliver Information About Threat 
-
-### What Are The Types of Threat Intelligence?
-* Strategic Threat Intelligence
-* Tactical Threat Intelligence
-* Technical Threat Intelligence
-* Operational Threat Intelligence
-
 
 ### Explain True Positive and  False Positive.
 
@@ -449,3 +433,25 @@ It should also be noted that using only one approach may not be sufficient to an
 ### Which field of which event should I look at so that I can detect RDP logons?
 
 You can detect RDP logon activities with event ID 4624. "Logon Type" value should be **10**.
+
+
+## Threat Intelligence
+
+### What is Cyber Threat Intelligence (CTI)?
+
+Threat intelligence is the analysis of data using tools and techniques to generate meaningful information about existing or emerging threats targeting the organization that helps mitigate risks. Threat Intelligence helps organizations make faster, more informed security decisions and change their behavior from reactive to proactive to combat the attacks. ([eccouncil](https://www.eccouncil.org/cyber-threat-intelligence/))
+
+### What is TAXII in Cyber Threat Intelligence (CTI)?
+
+TAXII, short for Trusted Automated eXchange of Intelligence Information, defines how cyber threat information can be shared via services and message exchanges. ([anomali](https://www.anomali.com/resources/what-are-stix-taxii))
+
+### Name some of the Threat Intelligence Platforms
+
+IBM X Force Exchange, Cisco Talos, OTX AlienVault
+
+### What are the types of Threat Intelligence?
+
+- Strategic Threat Intelligence
+- Tactical Threat Intelligence
+- Technical Threat Intelligence
+- Operational Threat Intelligence
