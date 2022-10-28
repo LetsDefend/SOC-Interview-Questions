@@ -258,7 +258,7 @@ The **Dynamic Host Configuration Protocol** (DHCP) is a network management proto
 
 ### What is the key difference between IDS and IPS?
 
-IDS only detect the traffic but IPS can prevent/block the traffic.
+IDS only _detects_ the traffic but IPS can _prevent/block_ the traffic.
 
 ### How can you protect yourself from Man-in-the-middle attacks?
 
