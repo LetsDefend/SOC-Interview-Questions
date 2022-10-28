@@ -35,7 +35,7 @@ Below is a list of the topics on which questions can be asked in the interview.
 
 ### Incident Responder
 
- - Incident response prosedure
+ - Incident response procedure
  - How to detect and remediate specific kind of attack (like golden ticket, phishing etc.)
  - Ransomware remediation process
 
