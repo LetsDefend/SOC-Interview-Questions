@@ -299,10 +299,15 @@ There are 3 types of SQL Injections. These are:
 
 ### How to prevent SQL injection vulnerability?
 
--   **When examining a web request check all areas that come from the user:** Because SQL Injection attacks are not limited to the form areas, you should also check the HTTP Request Headers like User-Agent.
--   **Look for SQL keywords:** Look for words like INSERT, SELECT, WHERE within the data received from users.
--   **Check for special characters:** Look for apostrophes (‘), dashes (-), or parentheses which are used in SQL or special characters that are frequently used in SQL attacks within the data received from the user.
--   **Familiarize yourself with frequently used SQL Injection payloads:**  Even though SQL payloads change according to the web application, attackers still use some common payloads to check for SQL Injection vulnerabilities. If you are familiar with these payloads, you can easily detect SQL Injection payloads. You can see some frequently used SQL Injection payloads  [here](https://github.com/payloadbox/sql-injection-payload-list).
+The only effective way to fully prevent SQL injection vulnerabilities is to use "parameterized queries", also known as "prepared statement". The SQL query is prepared with placeholders, that are then assigned a value.
+
+Example:
+
+~~~sql
+SELECT id FROM users WHERE users = :id;
+~~~
+
+Then `:id` is then assigned a value, and this completely prevents SQL injections because the SQL engine expects only a value here and will throw an error if the value is incorrect.
 
 ### What is XSS and how XSS can be prevented?
 
@@ -311,6 +316,8 @@ Cross-Site Scripting (XSS) attacks are a type of injection, in which malicious s
 For XSS attacks to be successful, an attacker needs to insert and execute malicious content in a webpage. Each variable in a web application needs to be protected. Ensuring that  **all variables**  go through validation and are then escaped or sanitized is known as perfect injection resistance. Any variable that does not go through this process is a potential weakness. Frameworks make it easy to ensure variables are correctly validated and escaped or sanitised.
 
 However, frameworks aren't perfect and security gaps still exist in popular frameworks like React and Angular. Output Encoding and HTML Sanitization help address those gaps.
+
+The most effective way to prevent XSS vulnerabilities is to use a restrictive Content-Security-Policy header. See [CSP on MDN documentation](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP).
 
 ### Explain XSS types.
 
@@ -342,6 +349,8 @@ LFI differs from RFI because the file that is intended to be included is on the 
 
 Cross-Site Request Forgery (CSRF) is an attack that forces an end user to execute unwanted actions on a web application in which they’re currently authenticated. With a little help of social engineering (such as sending a link via email or chat), an attacker may trick the users of a web application into executing actions of the attacker’s choosing. If the victim is a normal user, a successful CSRF attack can force the user to perform state changing requests like transferring funds, changing their email address, and so forth. If the victim is an administrative account, CSRF can compromise the entire web application. ([OWASP](https://owasp.org/www-community/attacks/csrf))
 
+Note that modern browsers will prevent most CSRF attacks in javascript due to same-origin policy restrictions. So we're left with POST methods and the need for the browser to send a cookie (assuming that GET requests are not modifying any state in the application). But this can be prevented by using the `SameSite` cookie attribute so the browser doesn't send the cookie along if the request is coming from another site. See [The State of CSRF Vulnerability in 2022](https://utkusen.medium.com/the-state-of-csrf-vulnerability-in-2022-3858e6d90ab9) for more information.
+
 ### What is WAF?
 
 A WAF or web application firewall helps protect web applications by filtering and monitoring HTTP traffic between a web application and the Internet. It typically protects web applications from attacks such as cross-site forgery, cross-site-scripting (XSS), file inclusion, and SQL injection, among others. A WAF is a protocol layer 7 defense (in the OSI model), and is not designed to defend against all types of attacks. ([Cloudflare](https://www.cloudflare.com/learning/ddos/glossary/web-application-firewall-waf/))
@@ -349,22 +358,24 @@ A WAF or web application firewall helps protect web applications by filtering an
 
 ## Cryptography
 
-### What are encoding, hashing, encryption?
+### What are encoding, hashing, encryption and authentication?
 
 **Encoding:** Converts the data in the desired format required for exchange between different systems.
 
-**Hashing:** Maintains the integrity of a message or data. Any change did any day could be noticed.
+**Hashing:** Similar to a fingerprint of data. The output is of fixed length and changing even one bit of input data will completely modify the hash output.
 
 **Encryption:** Ensures that the data is secure and one needs a digital verification code or image in order to open it or access it.
+
+**Authentication:** Ensures that the data was produced by a known entity and was not tampered with (see [HMAC](https://en.wikipedia.org/wiki/HMAC)).
 
 
 ### What is the  difference between hashing and encryption?
 
-**Hashing:** Hashing is the process of converting the information into a key using a hash function. The original information cannot be retrieved from the hash key by any means. ([GeeksforGeeks](https://www.geeksforgeeks.org/difference-between-hashing-and-encryption/))
+**Hashing:** Hashing is the process of converting the information into a key using a hash function. The original information cannot be retrieved from the hash key by any means (unless trying all possible values: brute force attack). ([GeeksforGeeks](https://www.geeksforgeeks.org/difference-between-hashing-and-encryption/))
 
 **Encryption:** Encryption is the process of converting a normal readable message known as plaintext into a garbage message or not readable message known as Ciphertext. The ciphertext obtained from the encryption can easily be transformed into plaintext using the encryption key. ([GeeksforGeeks](https://www.geeksforgeeks.org/difference-between-hashing-and-encryption/))
 
-**Difference:** 
+**Difference:**
 
  - The hash function does not need a key to operate.
  - While the length of the output can variable in encryption algorithms, there is a fixed output length in hashing algorithms.
@@ -373,6 +384,8 @@ A WAF or web application firewall helps protect web applications by filtering an
 ### Explain salted hashes?
 
 A salt is added to the hashing process to force their uniqueness, increase their complexity without increasing user requirements, and to mitigate password attacks like hash tables. ([Auth0](https://auth0.com/blog/adding-salt-to-hashing-a-better-way-to-store-passwords/))
+
+Modern password hashing functions include a salt directly (bcrypt).
 
 ### What are differences between SSL and TLS?
 
