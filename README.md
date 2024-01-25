@@ -271,7 +271,8 @@ The **Dynamic Host Configuration Protocol** (DHCP) is a network management proto
 
 IDS only _detects_ the traffic but IPS can _prevent/block_ the traffic.
 
-### How can you protect yourself from Man-in-The-Middle attacks?
+
+### How can you protect yourself from Man-in-the-middle (on-path) attacks?
 
 While answering this question vary different scenarios, encryption is the key point for being safe.
 
