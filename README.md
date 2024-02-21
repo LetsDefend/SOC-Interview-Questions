@@ -57,7 +57,6 @@ Below is a list of the topics on which questions can be asked in the interview.
      - [The Hacker News](https://thehackernews.com/)
      - [Malwarebytes Labs](https://blog.malwarebytes.com/)
      - [HackRead](https://www.hackread.com/)
-     - [ThreatPost](https://threatpost.com/)
  - By following infosec related social media accounts.
  - Telegram channels
  - Joining newsletters related to cyber security
