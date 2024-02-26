@@ -116,7 +116,7 @@ If you do have any project to show, make sure that you prepare it before the int
 
  - Antivirus
  - EDR (Endpoint Detection and Response)
- - XDR (Extented Detection and Response)
+ - XDR (Extended Detection and Response)
  - DLP (Data Loss Prevention)
 
 ### What are HIDS and NIDS?
@@ -165,7 +165,7 @@ Indicators of Compromise (IOCs) serve as forensic evidence of potential intrusio
 
 Indicators of Attack (IOAs) demonstrate the intentions behind a cyberattack and the techniques used by the threat actor to accomplish their objectives. The specific cyber threats arming the attack, like malware, ransomware, or advanced threats, are of little concern when analyzing IOAs. ([UpGuard](https://www.upguard.com/blog/what-are-indicators-of-attack)) 
 
-### Explain True Positive and  False Positive.
+### Explain True Positive and False Positive.
 
 ![_img source:towardsdatascience.com_](https://letsdefend.io/images/training/IMS/2/false-positive-true-positive.PNG)
 
@@ -304,7 +304,7 @@ There are 3 types of SQL Injections. These are:
 
 1.  **In-Band SQLi (Classical SQLi)**: If a SQL query is sent and a replied to over the same channel, we call these In-band SQLi. It is easier for attackers to exploit these compared to other SQLi categories.
   
-2.  **Inferential SQLi (Blind SQLi)**:  SQL queries that receive a reply that cannot be seen are called Inferential SQLi. They are called Blind SQLi because the reply cannot be seen.
+2.  **Inferential SQLi (Blind SQLi)**: SQL queries that receive a reply that cannot be seen are called Inferential SQLi. They are called Blind SQLi because the reply cannot be seen.
   
 3.  **Out-of-Band SQLi**: If the reply to a SQL query is communicated over a different channel then this type of SQLi is called Out-of-Band SQLi. For example, if the attacker is receiving replies to his SQL queries over the DNS this is called an Out-of-Band SQLi.
 
@@ -316,13 +316,13 @@ There are 3 types of SQL Injections. These are:
 
 -   **Check for special characters:** Look for apostrophes (‘), dashes (-), or parentheses which are used in SQL or special characters that are frequently used in SQL attacks within the data received from the user.
 
--   **Familiarize yourself with frequently used SQL Injection payloads:**  Even though SQL payloads change according to the web application, attackers still use some common payloads to check for SQL Injection vulnerabilities. If you are familiar with these payloads, you can easily detect SQL Injection payloads. You can see some frequently used SQL Injection payloads  [here](https://github.com/payloadbox/sql-injection-payload-list).
+-   **Familiarize yourself with frequently used SQL Injection payloads:** Even though SQL payloads change according to the web application, attackers still use some common payloads to check for SQL Injection vulnerabilities. If you are familiar with these payloads, you can easily detect SQL Injection payloads. You can see some frequently used SQL Injection payloads  [here](https://github.com/payloadbox/sql-injection-payload-list).
 
 ### What is XSS and how XSS can be prevented?
 
 Cross-Site Scripting (XSS) attacks are a type of injection, in which malicious scripts are injected into otherwise benign and trusted websites. XSS attacks occur when an attacker uses a web application to send malicious code, generally in the form of a browser side script, to a different end user. Flaws that allow these attacks to succeed are quite widespread and occur anywhere a web application uses input from a user within the output it generates without validating or encoding it. ([OWASP](https://owasp.org/www-community/attacks/xss/))
 
-For XSS attacks to be successful, an attacker needs to insert and execute malicious content in a webpage. Each variable in a web application needs to be protected. Ensuring that  **all variables**  go through validation and are then escaped or sanitized is known as perfect injection resistance. Any variable that does not go through this process is a potential weakness. Frameworks make it easy to ensure variables are correctly validated and escaped or sanitised.
+For XSS attacks to be successful, an attacker needs to insert and execute malicious content in a webpage. Each variable in a web application needs to be protected. Ensuring that  **all variables**  go through validation and are then escaped or sanitized is known as perfect injection resistance. Any variable that does not go through this process is a potential weakness. Frameworks make it easy to ensure variables are correctly validated and escaped or sanitized.
 
 However, frameworks aren't perfect and security gaps still exist in popular frameworks like React and Angular. Output Encoding and HTML Sanitization help address those gaps.
 
@@ -332,7 +332,7 @@ However, frameworks aren't perfect and security gaps still exist in popular fram
   
 3.  **Stored XSS (Persistent)**: It is a type of XSS where the attacker can permanently upload the XSS payload to the web application. Compared to other types, the most dangerous type of XSS is Stored XSS.
   
-5.  **DOM Based XSS**: DOM Based XSS is an XSS attack wherein the attack payload is executed as a result of modifying the DOM "environment" in the victim’s browser used by the original client side script, so that the client side code runs in an "unexpected" manner. (OWASP)
+5.  **DOM Based XSS**: DOM Based XSS is an XSS attack wherein the attack payload is executed as a result of modifying the DOM "environment" in the victim’s browser used by the original client-side script, so that the client-side code runs in an "unexpected" manner. (OWASP)
 
 ### What is IDOR?
 
@@ -342,7 +342,7 @@ Among the highest web application vulnerability security risks published in the 
 
 ### What is RFI?
 
-Remote File Inclusion (RFI), is the security vulnerability that occurs when a file on different server is included without sanitizing the data obtained from a user.
+Remote File Inclusion (RFI), is the security vulnerability that occurs when a file on a different server is included without sanitizing the data obtained from a user.
 
 ### What is LFI?
 
@@ -404,7 +404,7 @@ A salt is added to the hashing process to force their uniqueness, increase their
 
 ## Malware Analysis
 
-### What is the name of the software that compiles of the written codes?
+### What is the name of the software that compiles written code?
 
  - Compiler
 
@@ -414,7 +414,7 @@ A salt is added to the hashing process to force their uniqueness, increase their
 
 ### What is the difference between static and dynamic malware analysis?
 
- - **Static Analysis:** It is the approach of analyzing malicious software by reverse engineering methods without running them. Generally, by decompile / disassemble the malware, each step that the malware will execute is analyzed, hence the behavior / capacity of the malware can be analyzed.
+ - **Static Analysis:** It is the approach of analyzing malicious software by reverse engineering methods without running them. Generally, by decompiling / disassembling the malware, each step that the malware will execute is analyzed, hence the behavior / capacity of the malware can be analyzed.
 
  - **Dynamic Analysis:** It is the approach that examines the behavior of malicious software on the system by running it. In dynamic analysis, applications that can examine registry, file, network and process events are installed in the system, and their behavior is examined by running malicious software.
 
@@ -468,7 +468,7 @@ TAXII, short for Trusted Automated eXchange of Intelligence Information, defines
 
 ### Name some of the Threat Intelligence Platforms
 
- - IBM X Force Exchange
+ - IBM X-Force Exchange
  - Cisco Talos
  - OTX AlienVault
 
