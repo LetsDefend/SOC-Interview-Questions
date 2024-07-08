@@ -188,6 +188,11 @@ If we look at the URL example below, we see the SQL parameter "Union" keyword wi
 https://www.google.com/search?q=FC+Union+Berlin
 ```
 
+### Describe the Zero Trust security concept.
+
+The Zero Trust security model is a cybersecurity framework that operates on the principle of "never trust, always verify." It assumes that threats can come from both outside and inside the network and thus requires strict identity verification for every person and device trying to access resources on the network, regardless of whether they are within or outside the network perimeter.
+
+
 ## Network
 
 ### What is OSI Model? Explain each layer.
