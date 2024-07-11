@@ -280,6 +280,19 @@ IDS only _detects_ the traffic but IPS can _prevent/block_ the traffic.
 
 While answering this question vary different scenarios, encryption is the key point for being safe.
 
+### What is Kerberos?
+Kerberos is a network authentication protocol that uses secret-key cryptography to authenticate users and services in a network environment. It's designed to provide strong authentication for client/server applications by verifying the identity of users and services without transmitting passwords over the network.
+
+### How does Kerberos work?
+![Kerberos Handshake](https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Kerberos_protocol.svg/645px-Kerberos_protocol.svg.png)
+Kerberos operates based on a ticket-granting system. When a user wants to access a network service, they first authenticate themselves to the Kerberos Authentication Server (AS) using their username and password. If the credentials are valid the AS issues a Ticket Granting Ticket (TGT), encrypted with a secret key derived from the user's password.
+
+When the user wants to access a specific service, they contact the Ticket Granting Service (TGS) with their TGT, requesting access. The TGS decrypts the TGT, verifies its validity, and issues a service ticket that's encrypted with the service's secret key.
+
+The user then presents this service ticket to the desired network service. The service decrypts the ticket using its own secret key, verifies the ticket's validity, and if everything is correct, grants access to the user.
+
+### What is a Golden Ticket attack?
+An attacker gains access to a domain's Key Distribution Center service account, allowing them to create authentication tickets granting unauthorized access to any resource within the domain.
 
 ## Web Application Security
 
@@ -448,17 +461,21 @@ A salt is added to the hashing process to force their uniqueness, increase their
  - Application
  - System
 
-### With which security Event ID can the Successfully RDP connection be detected?
+### With which default security Event ID can a successful authentication be detected?
 
  - 4624
 
-### With which event id can failed logons be detected?
+### With which default event id can failed logons be detected?
 
  - 4625
 
-### Which field of which event should I look at so that I can detect RDP logons?
+### Which field of which event should I look at so that I can detect remote authentication?
 
- - You can detect RDP logon activities with `Event ID: 4624` and `Logon Type: 10`.
+ - You can detect an authentication activities associated with a remote user with `Event ID: 4624` and `Logon Type: 10` or `Logon Type: 7` if a user is reactivating a disconnected session.
+
+### With which event ID can you detect a successful RDP connection?
+
+ - `Event ID: 1149` from `Microsoft-Windows-Terminal-Services-RemoteConnectionManager`
 
 
 ## Threat Intelligence
@@ -466,6 +483,10 @@ A salt is added to the hashing process to force their uniqueness, increase their
 ### What is Cyber Threat Intelligence (CTI)?
 
 Threat intelligence is the analysis of data using tools and techniques to generate meaningful information about existing or emerging threats targeting the organization that helps mitigate risks. Threat Intelligence helps organizations make faster, more informed security decisions and change their behavior from reactive to proactive to combat the attacks. ([eccouncil](https://www.eccouncil.org/cyber-threat-intelligence/))
+
+### Is an IP Address by itself Threat Intelligence?
+
+No. An IP Address can become threat intelligence if contextualised with the nature of the potential threat.
 
 ### What is TAXII in Cyber Threat Intelligence (CTI)?
 
