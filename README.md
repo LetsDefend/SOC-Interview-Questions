@@ -21,6 +21,9 @@ This repository is maintained by [**LetsDefend**](https://letsdefend.io/). If yo
 - [Threat Intelligence](https://github.com/LetsDefend/SOC-Interview-Questions/blob/main/README.md#threat-intelligence)
 
 
+## Video Version
+[![SOC Interview Questions](https://app-ld-img.s3.us-east-2.amazonaws.com/General/soc-analyst-yt.png)](https://www.youtube.com/watch?v=oOhNOt10K2M "SOC Analyst Interview Questions")
+
 ## What should you expect?
 
 Below is a list of the topics on which questions can be asked in the interview.
