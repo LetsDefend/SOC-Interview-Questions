@@ -195,6 +195,8 @@ https://www.google.com/search?q=FC+Union+Berlin
 
 The Zero Trust security model is a cybersecurity framework that operates on the principle of "never trust, always verify." It assumes that threats can come from both outside and inside the network and thus requires strict identity verification for every person and device trying to access resources on the network, regardless of whether they are within or outside the network perimeter.
 
+### What is "living off the land".
+A method where attackers use legitimate, trusted built-in tools already in the target system to conduct attacks over using custom-made attacks.
 
 ## Network
 
