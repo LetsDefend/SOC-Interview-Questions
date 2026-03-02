@@ -381,6 +381,18 @@ Cross-Site Request Forgery (CSRF) is an attack that forces an end user to execut
 
 Web Application Firewall (WAF) helps protect web applications by filtering and monitoring HTTP traffic between a web application and the Internet. It typically protects web applications from attacks such as Cross-Site Request Forgery (CSRF), Cross-Site Scripting (XSS), file inclusion, and SQL Injection, among others. A WAF is a protocol layer 7 defense (in the OSI model), and is not designed to defend against all types of attacks. ([Cloudflare](https://www.cloudflare.com/learning/ddos/glossary/web-application-firewall-waf/))
 
+### What is the difference between Stateless and Stateful Protocols?
+
+**Stateless Protocol:** A communication protocol in which the server does not retain any information about previous requests from the client. Each request is treated as an independent transaction, unrelated to any previous request. Examples include HTTP and UDP.
+
+**Stateful Protocol:** A communication protocol in which the server keeps track of the state and context of each communication session. The server remembers previous requests and can use that information to process subsequent requests. Examples include TCP and FTP.
+
+**Key Differences:**
+
+Stateless protocols do not store any session information on the server, meaning each request is treated independently without any knowledge of previous interactions. This makes them simpler to design and easier to scale. Stateful protocols, on the other hand, maintain session data on the server, allowing requests to depend on the context of previous ones. While this provides more control over the communication flow, it makes the system more complex and harder to scale.
+
+A common example is the difference between UDP (stateless) and TCP (stateful). UDP sends packets without establishing a connection or tracking their delivery, while TCP establishes a connection through a three-way handshake and keeps track of the session state throughout the communication.
+
 
 ## Cryptography
 
