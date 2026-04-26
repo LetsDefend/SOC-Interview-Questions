@@ -117,7 +117,7 @@ If you do have any project to show, make sure that you prepare it before the int
 
 ### Could you share some general endpoint security product categories?
 
- - Antivirus
+ - AV  (Antivirus)
  - EDR (Endpoint Detection and Response)
  - XDR (Extended Detection and Response)
  - DLP (Data Loss Prevention)
@@ -376,6 +376,10 @@ LFI differs from RFI because the file that is intended to be included is on the 
 ### What is CSRF?
 
 Cross-Site Request Forgery (CSRF) is an attack that forces an end user to execute unwanted actions on a web application in which they're currently authenticated. With a little help of social engineering (such as sending a link via email or chat), an attacker may trick the users of a web application into executing actions of the attacker's choosing. If the victim is a normal user, a successful CSRF attack can force the user to perform state changing requests like transferring funds, changing their email address, and so forth. If the victim is an administrative account, CSRF can compromise the entire web application. ([OWASP](https://owasp.org/www-community/attacks/csrf))
+
+### What is SSRF?
+
+In a Server-Side Request Forgery (SSRF) attack, the attacker can abuse functionality on the server to read or update internal resources. The attacker can supply or modify a URL which the code running on the server will read or submit data to, and by carefully selecting the URLs, the attacker may be able to read server configuration such as AWS metadata, connect to internal services like http enabled databases or perform post requests towards internal services which are not intended to be exposed. ([OWASP](https://owasp.org/www-community/attacks/Server_Side_Request_Forgery))
 
 ### What is WAF?
 
